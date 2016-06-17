@@ -14,11 +14,6 @@ div.img:hover {
     border: 1px solid #777;
 }
 
-div.img img {
-    width: 100%;
-    height: auto;
-}
-
 div.desc {
     padding: 15px;
     text-align: center;
@@ -47,6 +42,18 @@ div.desc {
     }
 }
 
+div.img {
+    height: 400px; /*this makes sure to maintain the aspect ratio*/
+    width: auto; /*set the width or max-width*/
+}
+
+div.img img {
+	height: 85%;
+	width: auto;
+	display: block;
+	margin: 3px auto;
+}
+
 .clearfix:after {
     content: "";
     display: table;
@@ -71,7 +78,7 @@ div.desc {
 <div class="banner">
   <div class="container">
     <h1 style="text-align:center">Moving Sale</h1>
-    <h2 style="text-align:center">I am selling items that I have used lightly or not at all. The prices are more than 50% off the original prices. All items are in excellent condition, and the picutures you see are taken of the actual items you get.</h2>
+    <h2 style="text-align:center">I am selling items that I have used lightly or not at all. The prices are more than 50% off the original prices. All items are in excellent condition, and the picutures [click for large images] you see are taken of the actual items you get.</h2>
     <!--<h2 style="text-align:center">Since I am moving and want to get rid of these items soon, all prices are negotiable, especially if you buy multiple items.</h2>-->
     <h2 style="text-align:center">I live near Hopkins Homewood campus/Roland Park. If you are interested, please send me an email at g2work.well[at]gmail.com.</h2>
   </div>
@@ -80,7 +87,7 @@ div.desc {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3358.JPG">
-      <img src="IMG_3358.JPG" alt="Computer Desk and Chair" width="300" height="200">
+      <img src="IMG_3358.JPG" alt="Computer Desk and Chair">
     </a>
     <div class="desc">29.5&prime; &times; 55&prime; Computer Desk ($30) and Chair ($10)</div>
   </div>
@@ -89,7 +96,7 @@ div.desc {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="hardwood dining table - desk.JPG">
-      <img src="hardwood dining table - desk.JPG" alt="Hardwood Dining Table" width="600" height="400">
+      <img src="hardwood dining table - desk.JPG" alt="Hardwood Dining Table">
     </a>
     <div class="desc">37.5&prime; &times; 85.5&prime; &times; 29&prime; Hardwood Dining Table - $125</div>
   </div>
@@ -188,7 +195,7 @@ div.desc {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="small book case.jpg">
-      <img src="small book case.jpg" alt="Red Small Book Case" width="600" height="400">
+      <img src="small book case.jpg" alt="Red Small Book Case" height="400">
     </a>
     <div class="desc">Red Small Book Case - $12</div>
   </div>

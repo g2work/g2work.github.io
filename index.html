@@ -6,17 +6,14 @@ h1 {
 	font-size: 5em;
 }
 
-div.img {
-    border: 1px solid #ccc;
-}
-
 div.img:hover {
     border: 1px solid #777;
 }
 
 div.desc {
-    padding: 15px;
+    padding: 0.5em;
     text-align: center;
+    font-size: 0.8em;
 }
 
 * {
@@ -24,35 +21,55 @@ div.desc {
 }
 
 .responsive {
-    padding: 0 6px;
+    padding: 0;
     float: left;
     width: 24.99999%;
+    max-height: 23em;
+}
+
+div.img {
+    border: 1px solid #ccc;
+    width: 95%; /*set the width or max-width*/
+    height: 21em; /*this makes sure to maintain the aspect ratio*/
+    margin-top: 1em;
+}
+
+div.img img {
+	/*
+	max-width:100%;
+	max-height:100%;
+	*/
+	/*
+	height: 20em;
+	width: auto; */
+	display: block;
+	margin: 0.2em auto;
+}
+
+.resize_horizontal{
+ width:93%;
+}
+.resize_vertical{
+ height:75%; /*
+ padding-top: 75%; */
 }
 
 @media only screen and (max-width: 700px){
     .responsive {
+    	height: 48%; /*this makes sure to maintain the aspect ratio*/
         width: 49.99999%;
         margin: 6px 0;
     }
 }
 
+
 @media only screen and (max-width: 500px){
     .responsive {
         width: 100%;
+    	height: auto; 
     }
 }
 
-div.img {
-    height: 400px; /*this makes sure to maintain the aspect ratio*/
-    width: auto; /*set the width or max-width*/
-}
-
-div.img img {
-	height: 85%;
-	width: auto;
-	display: block;
-	margin: 3px auto;
-}
 
 .clearfix:after {
     content: "";
@@ -87,7 +104,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3358.JPG">
-      <img src="IMG_3358.JPG" alt="Computer Desk and Chair">
+      <img class="resize_horizontal" src="IMG_3358.JPG" alt="Computer Desk and Chair">
     </a>
     <div class="desc">29.5&prime; &times; 55&prime; Computer Desk - $30 obo; Chair - $10 obo</div>
   </div>
@@ -96,7 +113,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="hardwood dining table - desk.JPG">
-      <img src="hardwood dining table - desk.JPG" alt="Hardwood Dining Table">
+      <img class="resize_horizontal" src="hardwood dining table - desk.JPG" alt="Hardwood Dining Table">
     </a>
     <div class="desc">37.5&prime; &times; 85.5&prime; &times; 29&prime; Hardwood Dining Table - $125</div>
   </div>
@@ -105,7 +122,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="dining table w 4 chairs.JPG">
-      <img src="dining table w 4 chairs.JPG" alt="Circular Dining Table with 4 Chairs" width="600" height="400">
+      <img class="resize_horizontal" src="dining table w 4 chairs.JPG" alt="Circular Dining Table with 4 Chairs">
     </a>
     <div class="desc">42&prime; Circular Dining Table with 4 Chairs - $40 obo</div>
   </div>
@@ -114,7 +131,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="hardwood coffee table.JPG">
-      <img src="hardwood coffee table.JPG" alt="Hardwood Coffee Table and Carpet" width="600" height="400">
+      <img class="resize_horizontal" class="resize_horizontal" src="hardwood coffee table.JPG" alt="Hardwood Coffee Table and Carpet">
     </a>
     <div class="desc">37.5&prime; &times; 37.5&prime; Hardwood Coffee Table - $60 obo; Carpet - $8 obo</div>
   </div>
@@ -123,7 +140,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3368.JPG">
-      <img src="IMG_3368.JPG" alt="Aiwa Boombox (CD, cassette & radio)" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3368.JPG" alt="Aiwa Boombox (CD, cassette & radio)">
     </a>
     <div class="desc">Aiwa Boombox (CD, cassette & radio) - $20 obo</div>
   </div>
@@ -132,7 +149,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="loveseat w cushions.JPG">
-      <img src="loveseat w cushions.JPG" alt="Loveseat" width="600" height="400">
+      <img class="resize_horizontal" src="loveseat w cushions.JPG" alt="Loveseat">
     </a>
     <div class="desc">Loveseat - $40 obo</div>
   </div>
@@ -141,7 +158,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3488.JPG">
-      <img src="IMG_3488.JPG" alt="Comfy Sofa Chair" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3488.JPG" alt="Comfy Sofa Chair">
     </a>
     <div class="desc">Comfy Sofa Chair - $10 obo</div>
   </div>
@@ -150,7 +167,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="small coffee table.JPG">
-      <img src="small coffee table.JPG" alt="Small Coffee Table" width="600" height="400">
+      <img class="resize_horizontal" src="small coffee table.JPG" alt="Small Coffee Table">
     </a>
     <div class="desc">Small Coffee Table - $18 obo</div>
   </div>
@@ -159,7 +176,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="sturdy single sofa chair.JPG">
-      <img src="sturdy single sofa chair.JPG" alt="Single Sofa Chair" width="300" height="200">
+      <img class="resize_vertical" src="sturdy single sofa chair.JPG" alt="Single Sofa Chair">
     </a>
     <div class="desc">Sturdy & Comfortable Single Sofa Chair - $30 obo</div>
   </div>
@@ -168,7 +185,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="large book case.JPG">
-      <img src="large book case.JPG" alt="Black Large Book Case" width="600" height="400">
+      <img class="resize_vertical" src="large book case.JPG" alt="Black Large Book Case">
     </a>
     <div class="desc">11&prime; &times; 31&prime; &times; 79&prime; Black Large Book Case - $40</div>
   </div>
@@ -177,7 +194,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="shelf.jpg">
-      <img src="shelf.jpg" alt="Red Shelf" width="600" height="400">
+      <img class="resize_vertical" src="shelf.jpg" alt="Red Shelf">
     </a>
     <div class="desc">Red Shelf - $15 obo</div>
   </div>
@@ -186,7 +203,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="TV w converter.JPG">
-      <img src="TV w converter.JPG" alt="TV with Converter Box & Stand" width="600" height="400">
+      <img class="resize_vertical" src="TV w converter.JPG" alt="TV with Converter Box & Stand">
     </a>
     <div class="desc">TV with Converter Box & Stand - $60</div>
   </div>
@@ -195,7 +212,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="small book case.jpg">
-      <img src="small book case.jpg" alt="Red Small Book Case" height="400">
+      <img class="resize_vertical" src="small book case.jpg" alt="Red Small Book Case">
     </a>
     <div class="desc">Red Small Book Case - $12 obo</div>
   </div>
@@ -204,7 +221,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3374.JPG">
-      <img src="IMG_3374.JPG" alt="Floor Lantern" width="300" height="200">
+      <img class="resize_vertical" src="IMG_3374.JPG" alt="Floor Lantern">
     </a>
     <div class="desc">Floor Lantern - $15 obo</div>
   </div>
@@ -213,7 +230,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="music system w remote.JPG">
-      <img src="music system w remote.JPG" alt="Sharp Music System with Remote Control (CD, Cassette & Radio)" width="600" height="400">
+      <img class="resize_horizontal" src="music system w remote.JPG" alt="Sharp Music System with Remote Control (CD, Cassette & Radio)">
     </a>
     <div class="desc">Sharp Music System with Remote Control (CD, Cassette & Radio)  - $50 obo</div>
   </div>
@@ -222,7 +239,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="side table.JPG">
-      <img src="side table.JPG" alt="Side Table" width="600" height="400">
+      <img class="resize_vertical" src="side table.JPG" alt="Side Table">
     </a>
     <div class="desc">Side Table - $5 obo</div>
   </div>
@@ -231,7 +248,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3485.JPG">
-      <img src="IMG_3485.JPG" alt="Nonstick Cooking Pot" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3485.JPG" alt="Nonstick Cooking Pot">
     </a>
     <div class="desc">Nonstick Cooking Pot - $7 obo</div>
   </div>
@@ -240,7 +257,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3397.JPG">
-      <img src="IMG_3397.JPG" alt="Crock-Pot" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3397.JPG" alt="Crock-Pot">
     </a>
     <div class="desc">Crock-Pot - $15</div>
   </div>
@@ -249,7 +266,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3394.JPG">
-      <img src="IMG_3394.JPG" alt="Food Network Enameled Cast-Iron Dutch Oven" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3394.JPG" alt="Food Network Enameled Cast-Iron Dutch Oven">
     </a>
     <div class="desc">Food Network Enameled Cast-Iron Dutch Oven - $30 obo</div>
   </div>
@@ -258,7 +275,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3387.JPG">
-      <img src="IMG_3387.JPG" alt="20-piece Baking Set (brand new)" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3387.JPG" alt="20-piece Baking Set (brand new)">
     </a>
     <div class="desc">20-piece Baking Set (brand new) - $13 obo</div>
   </div>
@@ -267,7 +284,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3384.JPG">
-      <img src="IMG_3384.JPG" alt="10-piece baking Set (brand new)" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3384.JPG" alt="10-piece baking Set (brand new)">
     </a>
     <div class="desc">10-piece baking Set (brand new) - $8 obo</div>
   </div>
@@ -276,7 +293,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3382.JPG">
-      <img src="IMG_3382.JPG" alt="7-piece Pasta Set" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3382.JPG" alt="7-piece Pasta Set">
     </a>
     <div class="desc">7-piece Pasta Set - $10 obo</div>
   </div>
@@ -285,7 +302,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3377.JPG">
-      <img src="IMG_3377.JPG" alt="Deep Saute Nonstick Wok" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3377.JPG" alt="Deep Saute Nonstick Wok">
     </a>
     <div class="desc">Deep Saute Nonstick Wok - $15 obo</div>
   </div>
@@ -294,7 +311,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3410.JPG">
-      <img src="IMG_3410.JPG" alt="11-piece Nonstick Steel Roaster Set (brand new)" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3410.JPG" alt="11-piece Nonstick Steel Roaster Set (brand new)">
     </a>
     <div class="desc">11-piece Nonstick Steel Roaster Set (brand new) - $12 obo</div>
   </div>
@@ -303,7 +320,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3398.JPG">
-      <img src="IMG_3398.JPG" alt="Hand Mixer" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3398.JPG" alt="Hand Mixer">
     </a>
     <div class="desc">Hand Mixer - $5</div>
   </div>
@@ -312,7 +329,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3499.JPG">
-      <img src="IMG_3499.JPG" alt="Shoe Rack" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3499.JPG" alt="Shoe Rack">
     </a>
     <div class="desc">Shoe Rack - $5 obo</div>
   </div>
@@ -321,7 +338,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3423.JPG">
-      <img src="IMG_3423.JPG" alt="Set of 8 Drinking Glasses" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3423.JPG" alt="Set of 8 Drinking Glasses">
     </a>
     <div class="desc">Set of 8 Drinking Glasses - $4 obo</div>
   </div>
@@ -330,7 +347,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3419.JPG">
-      <img src="IMG_3419.JPG" alt="Set of 6 POM Juice Glasses" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3419.JPG" alt="Set of 6 POM Juice Glasses">
     </a>
     <div class="desc">Set of 6 POM Juice Glasses - $3 obo</div>
   </div>
@@ -339,7 +356,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3407.JPG">
-      <img src="IMG_3407.JPG" alt="Tea Set" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3407.JPG" alt="Tea Set">
     </a>
     <div class="desc">Tea Set (brand new) - $4 obo</div>
   </div>
@@ -348,7 +365,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3411.JPG">
-      <img src="IMG_3411.JPG" alt="Dining Set (Big & Small Dishes and Cups)" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3411.JPG" alt="Dining Set (Big & Small Dishes and Cups)">
     </a>
     <div class="desc">Dining Set (Big & Small Dishes and Cups) - $10 obo</div>
   </div>
@@ -357,7 +374,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3468.JPG">
-      <img src="IMG_3468.JPG" alt="Sunbeam 12-Cup Coffee Maker with Filters" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3468.JPG" alt="Sunbeam 12-Cup Coffee Maker with Filters">
     </a>
     <div class="desc">Sunbeam 12-Cup Coffee Maker with Filters - $8 obo</div>
   </div>
@@ -366,7 +383,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3478.JPG">
-      <img src="IMG_3478.JPG" alt="Gevalia 12-Cup White Stainless Steel Programmable Coffee Maker with Filters" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3478.JPG" alt="Gevalia 12-Cup White Stainless Steel Programmable Coffee Maker with Filters">
     </a>
     <div class="desc">Gevalia 12-Cup White Stainless Steel Programmable Coffee Maker with Filters - $25</div>
   </div>
@@ -375,7 +392,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3469.JPG">
-      <img src="IMG_3469.JPG" alt="Ikea Julen Lamp" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3469.JPG" alt="Ikea Julen Lamp">
     </a>
     <div class="desc">Ikea Julen Lamp - $5 obo</div>
   </div>
@@ -384,7 +401,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3471.JPG">
-      <img src="IMG_3471.JPG" alt="Pair of Ikea Grono Lamps" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3471.JPG" alt="Pair of Ikea Grono Lamps">
     </a>
     <div class="desc">Pair of Ikea Grono Lamps - $8 obo</div>
   </div>
@@ -393,7 +410,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3476.JPG">
-      <img src="IMG_3476.JPG" alt="Java Sugar & Creamer" width="300" height="200">
+      <img class="resize_horizontal" src="IMG_3476.JPG" alt="Java Sugar & Creamer">
     </a>
     <div class="desc">Java Sugar & Creamer - $3</div>
   </div>
@@ -402,7 +419,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3482.JPG">
-      <img src="IMG_3482.JPG" alt="Creamers" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3482.JPG" alt="Creamers">
     </a>
     <div class="desc">Creamers - $1</div>
   </div>
@@ -411,7 +428,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3480.JPG">
-      <img src="IMG_3480.JPG" alt="Assorted Vases" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3480.JPG" alt="Assorted Vases">
     </a>
     <div class="desc">Assorted Vases - $2 large ones, $1 the small one</div>
   </div>
@@ -420,7 +437,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="IMG_3495.JPG">
-      <img src="IMG_3495.JPG" alt="Minerva Amaryllis Bulb Kit & Flower Seeds Mixture" width="600" height="400">
+      <img class="resize_horizontal" src="IMG_3495.JPG" alt="Minerva Amaryllis Bulb Kit & Flower Seeds Mixture">
     </a>
     <div class="desc">Minerva Amaryllis Bulb Kit & Flower Seeds Mixture - $5 obo</div>
   </div>

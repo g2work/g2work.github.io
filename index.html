@@ -14,6 +14,7 @@ div.desc {
     padding: 0.5em;
     text-align: center;
     font-size: 0.8em;
+    height: 4em;
 }
 
 * {
@@ -30,7 +31,7 @@ div.desc {
 div.img {
     border: 1px solid #ccc;
     width: 95%; /*set the width or max-width*/
-    height: 21em; /*this makes sure to maintain the aspect ratio*/
+    height: auto; /*this makes sure to maintain the aspect ratio*/
     margin-top: 1em;
 }
 
@@ -47,10 +48,11 @@ div.img img {
 }
 
 .resize_horizontal{
- width:93%;
+ width:92%;
 }
-.resize_vertical{
- height:75%; /*
+.resize_vertical{ 
+ max-width:90%;
+ max-height:18em; /*
  padding-top: 75%; */
 }
 
@@ -230,7 +232,7 @@ div.img img {
 <div class="responsive">
   <div class="img" style="margin-bottom:6px">
     <a target="_blank" href="music system w remote.JPG">
-      <img class="resize_horizontal" src="music system w remote.JPG" alt="Sharp Music System with Remote Control (CD, Cassette & Radio)">
+      <img class="resize_vertical" src="music system w remote.JPG" alt="Sharp Music System with Remote Control (CD, Cassette & Radio)">
     </a>
     <div class="desc">Sharp Music System with Remote Control (CD, Cassette & Radio)  - $50 obo</div>
   </div>
